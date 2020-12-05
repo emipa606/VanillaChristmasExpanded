@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Name="ChristmasTreeBase" ParentName="FurnitureBase">
+    <defName>ChristmasTreeBase</defName>
+    <thingClass>VXMASSE.Xtree</thingClass>
+    <tickerType>Normal</tickerType>
+    <designationCategory>Misc</designationCategory>
+    <label>white christmas tree</label>
+    <description>White christmas tree</description>
+    <designatorDropdown>ChristmasTrees</designatorDropdown>
+    <graphicData>
+      <texPath>Things/Buildings_ChristmasTree/ChristmasTreeA</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <shadowData>
+        <volume>(0.2, 0.35, 0.13)</volume>
+        <offset>(0,0,0.42)</offset>
+      </shadowData>
+    </graphicData>
+    <size>(1,1)</size>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>1</fillPercent>
+    <statBases>
+      <Beauty>40</Beauty>
+      <MaxHitPoints>140</MaxHitPoints>
+      <WorkToBuild>250</WorkToBuild>
+      <Mass>5</Mass>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <costList>
+      <Steel>10</Steel>
+      <WoodLog>20</WoodLog>
+      <Cloth>10</Cloth>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>false</shortCircuitInRain>
+        <basePowerConsumption>40</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(217,217,208,0)</glowColor>
+      </li>
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <rotatable>false</rotatable>
+    <uiIconScale>0.5</uiIconScale>
+    <uiIconOffset>(0,0.2)</uiIconOffset>
+  </ThingDef>
+  <ThingDef ParentName="ChristmasTreeBase">
+    <defName>ChristmasTreeB</defName>
+    <label>red christmas tree</label>
+    <description>Red christmas tree</description>
+    <graphicData>
+      <texPath>Things/Buildings_ChristmasTree/ChristmasTreeB</texPath>
+    </graphicData>
+  </ThingDef>
+  <ThingDef ParentName="ChristmasTreeBase">
+    <defName>ChristmasTreeC</defName>
+    <label>yellow christmas tree</label>
+    <description>Yellow christmas tree</description>
+    <graphicData>
+      <texPath>Things/Buildings_ChristmasTree/ChristmasTreeC</texPath>
+    </graphicData>
+  </ThingDef>
+  <ThingDef ParentName="ChristmasTreeBase">
+    <defName>ChristmasTreeD</defName>
+    <label>blue christmas tree</label>
+    <description>Blue christmas tree</description>
+    <graphicData>
+      <texPath>Things/Buildings_ChristmasTree/ChristmasTreeD</texPath>
+    </graphicData>
+  </ThingDef>
+</Defs>

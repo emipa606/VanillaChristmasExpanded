@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Present -->
+  <LabelPresentOpen>Open</LabelPresentOpen>
+  <PresentOpen>Open the present</PresentOpen>
+  <DaysUntilPresent>Christmas presents drop will happen every winter</DaysUntilPresent>
+  <PresentLabel>Presents!</PresentLabel>
+  <PresentLetter>You have detected a cluster of Christmas presents crashing nearby.
+
+Perhaps you’ll find their content useful. Or perhaps they will bring doom to your colony.</PresentLetter>
+  <CParyLabel>Christmas party!</CParyLabel>
+  <CParyLetter>Time for the Christmas party! Everyone who goes will gain recreation and social energy, and a lasting positive mood boost.</CParyLetter>
+</LanguageData>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!-- ========== Eggnogs ========== -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Brewery"]/recipes</xpath>
+    <value>
+      <li>Make_2Eggnogs</li>
+      <li>Make_6Eggnogs</li>
+    </value>
+  </Operation>
+</Patch>

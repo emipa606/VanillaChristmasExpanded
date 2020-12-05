@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RecipeDef>
+    <defName>Make_2Eggnogs</defName>
+    <label>make 2 eggnogs</label>
+    <description>Make 2 eggnogs.</description>
+    <jobString>Making 2 eggnogs.</jobString>
+    <workAmount>800</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Milk</li>
+          </thingDefs>
+        </filter>
+        <count>0.25</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>EggChickenUnfertilized</li>
+          </thingDefs>
+        </filter>
+        <count>0.25</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Milk</li>
+        <li>EggChickenUnfertilized</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Eggnog>2</Eggnog>
+    </products>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Make_6Eggnogs</defName>
+    <label>make 6 eggnogs</label>
+    <description>Make 6 eggnogs.</description>
+    <jobString>Making 6 eggnogs.</jobString>
+    <workAmount>800</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Milk</li>
+          </thingDefs>
+        </filter>
+        <count>0.75</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>EggChickenUnfertilized</li>
+          </thingDefs>
+        </filter>
+        <count>0.75</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Milk</li>
+        <li>EggChickenUnfertilized</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Eggnog>6</Eggnog>
+    </products>
+  </RecipeDef>
+</Defs>

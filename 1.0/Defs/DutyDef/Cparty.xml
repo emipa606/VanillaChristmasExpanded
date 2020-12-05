@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <DutyDef>
+    <defName>CParty</defName>
+    <hook>MediumPriority</hook>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="ThinkNode_ConditionalInPartyArea">
+          <subNodes>
+            <!-- Eat -->
+            <li Class="ThinkNode_ConditionalRandom">
+              <chance>0.1</chance>
+              <subNodes>
+                <li Class="JobGiver_EatInPartyArea" />
+              </subNodes>
+            </li>
+            <!-- Get joy -->
+            <li Class="ThinkNode_ConditionalRandom">
+              <chance>0.4</chance>
+              <subNodes>
+                <li Class="JobGiver_GetJoyInPartyArea" />
+              </subNodes>
+            </li>
+            <!-- Sit -->
+            <li Class="ThinkNode_ConditionalRandom">
+              <chance>0.5</chance>
+              <subNodes>
+                <li Class="VXMASSE.JobGiver_Sit" />
+              </subNodes>
+            </li>
+          </subNodes>
+        </li>
+        <!-- Reach the party area -->
+        <li Class="JobGiver_WanderInPartyArea">
+          <ticksBetweenWandersRange>
+            <min>400</min>
+            <max>800</max>
+          </ticksBetweenWandersRange>
+          <locomotionUrgency>Jog</locomotionUrgency>
+        </li>
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+  <ThoughtDef>
+    <defName>FeelingFestive</defName>
+    <durationDays>5</durationDays>
+    <stages>
+      <li>
+        <label>feeling festive</label>
+        <description>I had a good time at that Christmas party.</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>
