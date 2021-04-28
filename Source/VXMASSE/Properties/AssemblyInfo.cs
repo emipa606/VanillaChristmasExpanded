@@ -1,7 +1,5 @@
-﻿using System;
-using System.Reflection;
+﻿using System.Reflection;
 using System.Runtime.InteropServices;
-
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyTitle("VXMASSE")]
 [assembly: AssemblyDescription("")]
