@@ -1,5 +1,8 @@
 # Changelog for VanillaChristmasExpanded
 
+1.0.3.0 - French translation added, thanks qux!
+
+
 1.0.2.0 - Should now trigger on permanent season-biomes as well
 
 

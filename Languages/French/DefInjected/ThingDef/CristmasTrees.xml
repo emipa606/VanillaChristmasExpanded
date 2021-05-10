@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <ChristmasTreeBase.label>Sapin de Noël blanc</ChristmasTreeBase.label>
+  <ChristmasTreeBase.description>Sapin de Noël blanc</ChristmasTreeBase.description>
+  <ChristmasTreeB.label>Sapin de Noël rouge</ChristmasTreeB.label>
+  <ChristmasTreeB.description>Sapin de Noël rouge</ChristmasTreeB.description>
+  <ChristmasTreeC.label>Sapin de Noël jaune</ChristmasTreeC.label>
+  <ChristmasTreeC.description>Sapin de Noël jaune</ChristmasTreeC.description>
+  <ChristmasTreeD.label>Sapin de Noël bleu</ChristmasTreeD.label>
+  <ChristmasTreeD.description>Sapin de Noël bleu</ChristmasTreeD.description>
+</LanguageData>

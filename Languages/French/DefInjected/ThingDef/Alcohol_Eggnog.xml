@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <Eggnog.label>Lait de poule</Eggnog.label>
+  <Eggnog.description>Chef-d'oeuvre de l'art culinaire et boisson parfaite pour Noël.</Eggnog.description>
+  <Eggnog.ingestible.ingestCommandString>boire {0}</Eggnog.ingestible.ingestCommandString>
+  <Eggnog.ingestible.ingestReportString>boit {0}</Eggnog.ingestible.ingestReportString>
+</LanguageData>

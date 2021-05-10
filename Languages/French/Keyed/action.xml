@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Present -->
+  <LabelPresentOpen>Ouvrir</LabelPresentOpen>
+  <PresentOpen>Ouvrir le cadeau</PresentOpen>
+  <DaysUntilPresent>Le largage de cadeaux de Noël aura lieu chaque hiver</DaysUntilPresent>
+  <PresentLabel>Cadeaux!</PresentLabel>
+  <PresentLetter>Vous avez détecté un groupe de cadeaux de Noël s'écraser à proximité.
+
+Peut-être que vous trouverez leur contenu utile. Ou peut-être apporteront-ils la mort dans votre colonie.</PresentLetter>
+  <CParyLabel>Fête de noël!</CParyLabel>
+  <CParyLetter>C'est l'heure de la fête de Noël! Tous ceux qui y vont gagneront de l'énergie récréative et sociale, ainsi qu'une bonne humeur positive.</CParyLetter>
+</LanguageData>
