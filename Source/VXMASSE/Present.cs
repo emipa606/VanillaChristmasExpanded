@@ -30,6 +30,8 @@ namespace VXMASSE
         // (get) Token: 0x06000024 RID: 36 RVA: 0x00002B1C File Offset: 0x00000D1C
         public bool CanOpen => HasAnyContents;
 
+        public int OpenTicks => 100;
+
         // Token: 0x0600002A RID: 42 RVA: 0x00003030 File Offset: 0x00001230
         public virtual void Open()
         {
@@ -83,8 +85,7 @@ namespace VXMASSE
         {
             var random = new Random();
             var num = random.Next(1, 101);
-            var flag = num > 10;
-            if (flag)
+            if (num > 10)
             {
                 var list = new List<ThingCategoryDef>
                 {
@@ -103,55 +104,54 @@ namespace VXMASSE
                 };
                 var thingCategoryDef = list.RandomElement();
                 var categoryDef = thingCategoryDef;
-                IEnumerable<ThingStuffPair> source = ThingStuffPair.AllWith(td => td.thingCategories != null && td.thingCategories.Contains(categoryDef));
+                IEnumerable<ThingStuffPair> source = ThingStuffPair.AllWith(td =>
+                    td.thingCategories != null && td.thingCategories.Contains(categoryDef));
                 while (!source.Any())
                 {
                     thingCategoryDef = list.RandomElement();
                     var def1 = thingCategoryDef;
-                    source = ThingStuffPair.AllWith(td => td.thingCategories != null && td.thingCategories.Contains(def1));
+                    source = ThingStuffPair.AllWith(td =>
+                        td.thingCategories != null && td.thingCategories.Contains(def1));
                 }
 
                 var thingStuffPair = source.RandomElement();
                 var thing = ThingMaker.MakeThing(thingStuffPair.thing, thingStuffPair.stuff);
                 CellFinder.TryRandomClosewalkCellNear(Position, Map, 1, out var intVec);
-                var flag2 = thing.def.thingCategories.Contains(ThingCategoryDefOf.Apparel) || thing.def.thingCategories.Contains(ThingCategoryDefOf.Weapons);
-                if (flag2)
+                if (thing.def.thingCategories.Contains(ThingCategoryDefOf.Apparel) ||
+                    thing.def.thingCategories.Contains(ThingCategoryDefOf.Weapons))
                 {
-                    var num2 = random.Next(0, 101);
-                    var flag3 = num2 < 20;
-                    if (flag3)
+                    if (random.Next(0, 101) < 20)
                     {
                         thing.TryGetComp<CompQuality>().SetQuality(QualityCategory.Poor, ArtGenerationContext.Outsider);
                     }
 
-                    var flag4 = num2 > 20 && num2 < 60;
-                    if (flag4)
+                    if (random.Next(0, 101) is > 20 and < 60)
                     {
-                        thing.TryGetComp<CompQuality>().SetQuality(QualityCategory.Normal, ArtGenerationContext.Outsider);
+                        thing.TryGetComp<CompQuality>()
+                            .SetQuality(QualityCategory.Normal, ArtGenerationContext.Outsider);
                     }
 
-                    var flag5 = num2 > 60 && num2 < 80;
-                    if (flag5)
+                    if (random.Next(0, 101) > 60 && random.Next(0, 101) < 80)
                     {
                         thing.TryGetComp<CompQuality>().SetQuality(QualityCategory.Good, ArtGenerationContext.Outsider);
                     }
 
-                    var flag6 = num2 > 80 && num2 < 90;
-                    if (flag6)
+                    if (random.Next(0, 101) > 80 && random.Next(0, 101) < 90)
                     {
-                        thing.TryGetComp<CompQuality>().SetQuality(QualityCategory.Excellent, ArtGenerationContext.Outsider);
+                        thing.TryGetComp<CompQuality>()
+                            .SetQuality(QualityCategory.Excellent, ArtGenerationContext.Outsider);
                     }
 
-                    var flag7 = num2 > 90 && num2 < 95;
-                    if (flag7)
+                    if (random.Next(0, 101) > 90 && random.Next(0, 101) < 95)
                     {
-                        thing.TryGetComp<CompQuality>().SetQuality(QualityCategory.Legendary, ArtGenerationContext.Outsider);
+                        thing.TryGetComp<CompQuality>()
+                            .SetQuality(QualityCategory.Legendary, ArtGenerationContext.Outsider);
                     }
 
-                    var flag8 = num2 > 95 && num2 < 101;
-                    if (flag8)
+                    if (random.Next(0, 101) > 95 && random.Next(0, 101) < 101)
                     {
-                        thing.TryGetComp<CompQuality>().SetQuality(QualityCategory.Masterwork, ArtGenerationContext.Outsider);
+                        thing.TryGetComp<CompQuality>()
+                            .SetQuality(QualityCategory.Masterwork, ArtGenerationContext.Outsider);
                     }
                 }
 
@@ -173,30 +173,29 @@ namespace VXMASSE
                 foreach (var incidentDef in allDefs)
                 {
                     var parms = StorytellerUtility.DefaultParmsNow(incidentDef.category, Map);
-                    var flag9 = incidentDef.Worker.CanFireNow(parms) && incidentDef.defName != "StrangerInBlackJoin" && incidentDef.defName != "PresentDrop" && incidentDef.defName != "ShortCircuit" && incidentDef.letterDef != null && incidentDef.letterDef.defName != "PurpleEvent" && !incidentDef.targetTags.Contains(IncidentTargetTagDefOf.World) && !incidentDef.targetTags.Contains(IncidentTargetTagDefOf.Caravan);
-                    if (flag9)
+                    if (incidentDef.Worker.CanFireNow(parms) && incidentDef.defName != "StrangerInBlackJoin" &&
+                        incidentDef.defName != "PresentDrop" && incidentDef.defName != "ShortCircuit" &&
+                        incidentDef.letterDef != null && incidentDef.letterDef.defName != "PurpleEvent" &&
+                        !incidentDef.targetTags.Contains(IncidentTargetTagDefOf.World) &&
+                        !incidentDef.targetTags.Contains(IncidentTargetTagDefOf.Caravan))
                     {
                         list2.Add(incidentDef);
                     }
                 }
 
                 var incidentDef2 = list2.RandomElement();
-                var flag10 = incidentDef2 == null;
-                if (flag10)
+                if (incidentDef2 == null)
                 {
                     EjectContents();
                 }
 
                 var incidentParms = StorytellerUtility.DefaultParmsNow(incidentDef2?.category, Map);
-                var pointsScaleable = incidentDef2 != null && incidentDef2.pointsScaleable;
+                var pointsScaleable = incidentDef2 is {pointsScaleable: true};
                 if (pointsScaleable)
                 {
-                    var storytellerComp = Find.Storyteller.storytellerComps.First(x => x is StorytellerComp_OnOffCycle || x is StorytellerComp_RandomMain);
-                    var flag11 = storytellerComp != null;
-                    if (flag11)
-                    {
-                        incidentParms = storytellerComp.GenerateParms(incidentDef2.category, incidentParms.target);
-                    }
+                    var storytellerComp = Find.Storyteller.storytellerComps.First(x =>
+                        x is StorytellerComp_OnOffCycle || x is StorytellerComp_RandomMain);
+                    incidentParms = storytellerComp.GenerateParms(incidentDef2.category, incidentParms.target);
                 }
 
                 incidentDef2?.Worker.TryExecute(incidentParms);

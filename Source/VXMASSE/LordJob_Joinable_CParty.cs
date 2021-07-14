@@ -47,12 +47,14 @@ namespace VXMASSE
             var transition = new Transition(lordToil_CParty, lordToil_End);
             transition.AddTrigger(new Trigger_TickCondition(ShouldBeCalledOff));
             transition.AddTrigger(new Trigger_PawnKilled());
-            transition.AddPreAction(new TransitionAction_Message("MessagePartyCalledOff".Translate(), MessageTypeDefOf.NegativeEvent, new TargetInfo(spot, Map)));
+            transition.AddPreAction(new TransitionAction_Message("MessagePartyCalledOff".Translate(),
+                MessageTypeDefOf.NegativeEvent, new TargetInfo(spot, Map)));
             stateGraph.AddTransition(transition);
             timeoutTrigger = new Trigger_TicksPassed(Rand.RangeInclusive(5000, 15000));
             var transition2 = new Transition(lordToil_CParty, lordToil_End);
             transition2.AddTrigger(timeoutTrigger);
-            transition2.AddPreAction(new TransitionAction_Message("MessagePartyFinished".Translate(), MessageTypeDefOf.SituationResolved, new TargetInfo(spot, Map)));
+            transition2.AddPreAction(new TransitionAction_Message("MessagePartyFinished".Translate(),
+                MessageTypeDefOf.SituationResolved, new TargetInfo(spot, Map)));
             stateGraph.AddTransition(transition2);
             return stateGraph;
         }
@@ -60,7 +62,8 @@ namespace VXMASSE
         // Token: 0x06000006 RID: 6 RVA: 0x000021C0 File Offset: 0x000003C0
         private bool ShouldBeCalledOff()
         {
-            return !GatheringsUtility.AcceptableGameConditionsToContinueGathering(Map) || !spot.Roofed(Map) && !JoyUtility.EnjoyableOutsideNow(Map);
+            return !GatheringsUtility.AcceptableGameConditionsToContinueGathering(Map) ||
+                   !spot.Roofed(Map) && !JoyUtility.EnjoyableOutsideNow(Map);
         }
 
         // Token: 0x06000007 RID: 7 RVA: 0x00002208 File Offset: 0x00000408

@@ -6,8 +6,19 @@ Update of Oskar Potocki and Kikohis mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=1944229762
 with their approval.
 
+- French translation added, thanks qux!
+
 ![Image](https://i.imgur.com/7Gzt3Rg.png)
 
+
+[table]
+    [tr]
+        [td]https://invite.gg/Mlie]![Image](https://i.imgur.com/zdzzBrc.png)
+[/td]
+        [td]https://github.com/emipa606/VanillaChristmasExpanded]![Image](https://i.imgur.com/kTkpTOE.png)
+[/td]
+    [/tr]
+[/table]
 	
 ![Image](https://i.imgur.com/NOW7jU1.png)
 

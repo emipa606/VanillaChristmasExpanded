@@ -11,8 +11,7 @@ namespace VXMASSE
         {
             var stringBuilder = new StringBuilder();
             stringBuilder.Append(base.GetInspectString());
-            var flag = stringBuilder.Length != 0;
-            if (flag)
+            if (stringBuilder.Length != 0)
             {
                 stringBuilder.AppendLine();
             }

@@ -23,7 +23,8 @@ namespace VXMASSE
 
             string text = "PresentLabel".Translate();
             string text2 = "PresentLetter".Translate();
-            Find.LetterStack.ReceiveLetter(text, text2, LetterDefOf.PositiveEvent, new TargetInfo(skyfaller.Position, map));
+            Find.LetterStack.ReceiveLetter(text, text2, LetterDefOf.PositiveEvent,
+                new TargetInfo(skyfaller.Position, map));
             return true;
         }
 

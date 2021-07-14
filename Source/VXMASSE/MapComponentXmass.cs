@@ -46,7 +46,10 @@ namespace VXMASSE
 
             once = true;
 
-            if (!map.listerBuildings.AllBuildingsColonistOfDef(ThingDef.Named("ChristmasTreeBase")).Any() && !map.listerBuildings.AllBuildingsColonistOfDef(ThingDef.Named("ChristmasTreeB")).Any() && !map.listerBuildings.AllBuildingsColonistOfDef(ThingDef.Named("ChristmasTreeC")).Any() && !map.listerBuildings.AllBuildingsColonistOfDef(ThingDef.Named("ChristmasTreeD")).Any())
+            if (!map.listerBuildings.AllBuildingsColonistOfDef(ThingDef.Named("ChristmasTreeBase")).Any() &&
+                !map.listerBuildings.AllBuildingsColonistOfDef(ThingDef.Named("ChristmasTreeB")).Any() &&
+                !map.listerBuildings.AllBuildingsColonistOfDef(ThingDef.Named("ChristmasTreeC")).Any() &&
+                !map.listerBuildings.AllBuildingsColonistOfDef(ThingDef.Named("ChristmasTreeD")).Any())
             {
                 //Log.Message("no tree");
                 return;
@@ -66,7 +69,9 @@ namespace VXMASSE
                 doTheThing = true;
             }
 
-            if (!doTheThing && (season != Season.Winter || GenDate.DayOfSeason(GenTicks.TicksAbs, Find.WorldGrid.LongLatOf(map.Tile).x) < 2) || !once)
+            if (!doTheThing && (season != Season.Winter ||
+                                GenDate.DayOfSeason(GenTicks.TicksAbs, Find.WorldGrid.LongLatOf(map.Tile).x) < 2) ||
+                !once)
             {
                 //Log.Message("not winter");
                 return;
@@ -87,23 +92,22 @@ namespace VXMASSE
         public bool TryStartParty()
         {
             var pawn = GatheringsUtility.FindRandomGatheringOrganizer(Faction.OfPlayer, map, GatheringDefOf.Party);
-            var flag = pawn == null;
             bool result;
-            if (flag)
+            if (pawn == null)
             {
                 result = false;
             }
             else
             {
-                var flag2 = !RCellFinder.TryFindGatheringSpot_NewTemp(pawn, GatheringDefOf.Party, true, out var intVec);
-                if (flag2)
+                if (!RCellFinder.TryFindGatheringSpot(pawn, GatheringDefOf.Party, true, out var intVec))
                 {
                     result = false;
                 }
                 else
                 {
                     LordMaker.MakeNewLord(pawn.Faction, new LordJob_Joinable_CParty(intVec, pawn), map);
-                    Find.LetterStack.ReceiveLetter("CParyLabel".Translate(), "CParyLetter".Translate(), LetterDefOf.PositiveEvent, new TargetInfo(intVec, map));
+                    Find.LetterStack.ReceiveLetter("CParyLabel".Translate(), "CParyLetter".Translate(),
+                        LetterDefOf.PositiveEvent, new TargetInfo(intVec, map));
                     result = true;
                 }
             }

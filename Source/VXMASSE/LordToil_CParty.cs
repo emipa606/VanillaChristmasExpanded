@@ -23,13 +23,13 @@ namespace VXMASSE
         {
             this.spot = spot;
             this.ticksPerPartyPulse = ticksPerPartyPulse;
-            data = new LordToilData_Party();
+            data = new LordToilData_Gathering();
             ticksToNextPulse = ticksPerPartyPulse;
         }
 
         // Token: 0x17000003 RID: 3
         // (get) Token: 0x0600000E RID: 14 RVA: 0x00002384 File Offset: 0x00000584
-        private LordToilData_Party Data => (LordToilData_Party) data;
+        private LordToilData_Gathering Data => (LordToilData_Gathering) data;
 
         // Token: 0x0600000F RID: 15 RVA: 0x000023A4 File Offset: 0x000005A4
         public override ThinkTreeDutyHook VoluntaryJoinDutyHookFor(Pawn p)
@@ -67,9 +67,7 @@ namespace VXMASSE
                 }
 
                 pawn.needs.mood.thoughts.memories.TryGainMemory(XDefOf.FeelingFestive);
-                var lordJob_Joinable_CParty = lord.LordJob as LordJob_Joinable_CParty;
-                var flag3 = lordJob_Joinable_CParty != null;
-                if (flag3)
+                if (lord.LordJob is LordJob_Joinable_CParty lordJob_Joinable_CParty)
                 {
                     TaleRecorder.RecordTale(TaleDefOf.AttendedParty, pawn, lordJob_Joinable_CParty.Organizer);
                 }

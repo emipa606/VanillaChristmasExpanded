@@ -11,17 +11,14 @@ namespace VXMASSE
         // Token: 0x06000013 RID: 19 RVA: 0x00002538 File Offset: 0x00000738
         protected override Job TryGiveJob(Pawn pawn)
         {
-            var flag = pawn.CurJob != null && pawn.CurJob.def == JobDefOf.GotoWander;
             var nextMoveOrderIsWait = pawn.mindState.nextMoveOrderIsWait;
-            var flag2 = !flag;
-            if (flag2)
+            if (!(pawn.CurJob != null && pawn.CurJob.def == JobDefOf.GotoWander))
             {
                 pawn.mindState.nextMoveOrderIsWait = !pawn.mindState.nextMoveOrderIsWait;
             }
 
-            var flag3 = nextMoveOrderIsWait && !flag;
             Job result;
-            if (flag3)
+            if (nextMoveOrderIsWait && !(pawn.CurJob != null && pawn.CurJob.def == JobDefOf.GotoWander))
             {
                 result = new Job(JobDefOf.Wait_Wander)
                 {
@@ -31,8 +28,7 @@ namespace VXMASSE
             else
             {
                 var exactWanderDest = GetExactWanderDest(pawn);
-                var flag4 = !exactWanderDest.IsValid;
-                if (flag4)
+                if (!exactWanderDest.IsValid)
                 {
                     pawn.mindState.nextMoveOrderIsWait = false;
                     result = null;
@@ -65,9 +61,10 @@ namespace VXMASSE
             bool validator(Thing x)
             {
                 bool result;
-                if (x.def.building != null && x.def.building.isSittable)
+                if (x.def.building is {isSittable: true})
                 {
-                    result = x.Position.GetThingList(pawn.Map).FindAll(p => p.def.race != null && p.def.race.IsFlesh).Count <= 0;
+                    result = x.Position.GetThingList(pawn.Map).FindAll(p => p.def.race is {IsFlesh: true})
+                        .Count <= 0;
                 }
                 else
                 {
@@ -77,14 +74,18 @@ namespace VXMASSE
                 return result;
             }
 
-            return GenClosest.ClosestThingReachable(position, pawn.Map, ThingRequest.ForGroup(ThingRequestGroup.BuildingArtificial), PathEndMode.OnCell, TraverseParms.For(TraverseMode.NoPassClosedDoorsOrWater, Danger.None), 8f, validator, null, 0, 4).Position;
+            return GenClosest.ClosestThingReachable(position, pawn.Map,
+                    ThingRequest.ForGroup(ThingRequestGroup.BuildingArtificial), PathEndMode.OnCell,
+                    TraverseParms.For(TraverseMode.NoPassClosedDoorsOrWater, Danger.None), 8f, validator, null, 0, 4)
+                .Position;
         }
 
         // Token: 0x06000016 RID: 22 RVA: 0x00002694 File Offset: 0x00000894
         protected virtual IntVec3 GetExactWanderDestIfNull(Pawn pawn)
         {
             var position = pawn.Position;
-            return RCellFinder.RandomWanderDestFor(pawn, position, 10f, wanderDestValidator, PawnUtility.ResolveMaxDanger(pawn, Danger.None));
+            return RCellFinder.RandomWanderDestFor(pawn, position, 10f, wanderDestValidator,
+                PawnUtility.ResolveMaxDanger(pawn, Danger.None));
         }
     }
 }
