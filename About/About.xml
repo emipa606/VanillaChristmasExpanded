@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <name>Vanilla Christmas Expanded (Continued)</name>
   <packageId>Mlie.VanillaChristmasExpanded</packageId>
@@ -12,14 +12,14 @@
   </supportedVersions>
   <modDependencies />
   <loadAfter />
-  <description>[img]https://i.imgur.com/WAEzk68.png[/img]
+  <description>[img]https://i.imgur.com/buuPQel.png[/img]
 Update of Oskar Potocki and Kikohis mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=1944229762
 with their approval.
 
 - French translation added, thanks qux!
 
-[img]https://i.imgur.com/7Gzt3Rg.png[/img]
+[img]https://i.imgur.com/pufA0kM.png[/img]
 
 [table]
     [tr]
@@ -28,7 +28,7 @@ with their approval.
     [/tr]
 [/table]
 	
-[img]https://i.imgur.com/NOW7jU1.png[/img]
+[img]https://i.imgur.com/Z4GOv8H.png[/img]
 [img]https://i.imgur.com/p7Fv1Z6.gif[/img]
 [url=https://www.patreon.com/oskarpotocki][img]https://i.imgur.com/m7knAau.png[/img][/url]
 
@@ -50,7 +50,7 @@ Rimworld is owned by Tynan Sylvester.
 
 [url=https://creativecommons.org/licenses/by-nc-nd/4.0/](CC BY-NC-ND 4.0)[/url]
 
-[img]https://i.imgur.com/Rs6T6cr.png[/img]
+[img]https://i.imgur.com/PwoNOj4.png[/img]
 [list]
 [*] See if the the error persists if you just have this mod and its requirements active.
 [*] If not, try adding your other mods until it happens again.
@@ -59,6 +59,5 @@ Rimworld is owned by Tynan Sylvester.
 [*] Do not report errors by making a discussion-thread, I get no notification of that.
 [*] If you have the solution for a problem, please post it to the GitHub repository.
 [/list]
-
 </description>
 </ModMetaData>
