@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <IncidentDef>
+    <defName>PresentDrop</defName>
+    <label>presents drop</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>VXMASSE.PresentsI</workerClass>
+    <baseChance>0</baseChance>
+    <minRefireDays>20</minRefireDays>
+  </IncidentDef>
+</Defs>

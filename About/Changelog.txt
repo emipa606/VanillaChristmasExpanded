@@ -1,5 +1,8 @@
 # Changelog for VanillaChristmasExpanded
 
+1.4.1 - Mod updated for 1.4 and passed autotests
+
+
 1.0.5.0 - Added support for Simple FX: Smoke
 
 

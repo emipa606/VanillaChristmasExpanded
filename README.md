@@ -7,6 +7,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1944229762
 with their approval.
 
 - French translation added, thanks qux!
+- Added support for https://steamcommunity.com/sharedfiles/filedetails/?id=2574489704]Simple FX: Smoke
 
 ![Image](https://i.imgur.com/pufA0kM.png)
 
@@ -23,11 +24,11 @@ Vanilla Christmas Expanded is what could easily be described as a temporary, fes
 This mod adds several new mechanics to the game, most notably a Christmas tree, being a 1x1 structure, enhancing the beauty of every room and allowing for a new event to occur - Presents!
 New structure - a fireplace, as well as a whole lot of eggnog are there to allow you to have a truly festive period.
 
-![Image](https://i.imgur.com/LPo1qcm.png)
+![Image](https://i.imgur.com/Al3cdR3.png)
 
-![Image](https://i.imgur.com/iu9aM3s.png)
+![Image](https://i.imgur.com/NYr28zC.png)
 
-![Image](https://i.imgur.com/1OEWyiD.png)
+![Image](https://i.imgur.com/5Bs6gcu.png)
 
 
 # Legal stuff
@@ -50,6 +51,7 @@ https://creativecommons.org/licenses/by-nc-nd/4.0/](CC BY-NC-ND 4.0)
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
+
 
 
 
