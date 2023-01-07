@@ -6,6 +6,11 @@ namespace VXMASSE;
 
 internal class PresentsI : IncidentWorker
 {
+    protected override bool CanFireNowSub(IncidentParms parms)
+    {
+        return VXMASSEMod.instance.Settings.VCEGifts && base.CanFireNowSub(parms);
+    }
+
     protected override bool TryExecuteWorker(IncidentParms parms)
     {
         var map = (Map)parms.target;

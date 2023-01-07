@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <!-- Present -->
+  <VCECurrentModVersion>Installed mod-version: {0}</VCECurrentModVersion>
+  <VCEGifts>Enable gift-drop</VCEGifts>
+  <VCEGiftsTT>Enables gifts dropping from the sky</VCEGiftsTT>
   <LabelPresentOpen>Open</LabelPresentOpen>
   <PresentOpen>Open the present</PresentOpen>
   <DaysUntilPresent>Christmas presents drop will happen every winter</DaysUntilPresent>

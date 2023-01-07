@@ -25,8 +25,8 @@
     </statBases>
     <tickerType>Normal</tickerType>
     <size>(1,1)</size>
-    <hasInteractionCell>true</hasInteractionCell>
-    <interactionCellOffset>(1,0,0)</interactionCellOffset>
+    <!-- <hasInteractionCell>true</hasInteractionCell> -->
+    <!-- <interactionCellOffset>(1,0,0)</interactionCellOffset> -->
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
   </ThingDef>
   <ThingDef ParentName="SkyfallerBase">
