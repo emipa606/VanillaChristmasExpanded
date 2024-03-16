@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Name="PresentBase" ParentName="BuildingBase">
+    <defName>Present</defName>
+    <label>present</label>
+    <description>Christmas present</description>
+    <thingClass>VXMASSE.Present</thingClass>
+    <graphicData>
+      <texPath>Things/Buildings_Gift</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <drawSize>(1, 1)</drawSize>
+      <shadowData>
+        <volume>(0.5, 0.5, 0.5)</volume>
+      </shadowData>
+      <drawRotated>false</drawRotated>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <fillPercent>0.5</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Flammability>0.8</Flammability>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <size>(1,1)</size>
+    <!-- <hasInteractionCell>true</hasInteractionCell> -->
+    <!-- <interactionCellOffset>(1,0,0)</interactionCellOffset> -->
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+  </ThingDef>
+  <ThingDef ParentName="SkyfallerBase">
+    <defName>PresentIncoming</defName>
+    <label>present (incoming)</label>
+    <size>(1, 1)</size>
+    <skyfaller>
+      <shadowSize>(1.5, 1.5)</shadowSize>
+    </skyfaller>
+  </ThingDef>
+</Defs>

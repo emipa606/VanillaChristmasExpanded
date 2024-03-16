@@ -54,6 +54,11 @@ public class JobGiver_Sit : JobGiver_Wander
     {
         var position = pawn.Position;
 
+        return GenClosest.ClosestThingReachable(position, pawn.Map,
+                ThingRequest.ForGroup(ThingRequestGroup.BuildingArtificial), PathEndMode.OnCell,
+                TraverseParms.For(TraverseMode.NoPassClosedDoorsOrWater, Danger.None), 8f, validator, null, 0, 4)
+            .Position;
+
         bool validator(Thing x)
         {
             bool result;
@@ -69,11 +74,6 @@ public class JobGiver_Sit : JobGiver_Wander
 
             return result;
         }
-
-        return GenClosest.ClosestThingReachable(position, pawn.Map,
-                ThingRequest.ForGroup(ThingRequestGroup.BuildingArtificial), PathEndMode.OnCell,
-                TraverseParms.For(TraverseMode.NoPassClosedDoorsOrWater, Danger.None), 8f, validator, null, 0, 4)
-            .Position;
     }
 
     protected virtual IntVec3 GetExactWanderDestIfNull(Pawn pawn)

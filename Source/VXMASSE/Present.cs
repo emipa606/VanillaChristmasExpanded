@@ -75,7 +75,6 @@ public class Present : Building, IThingHolder, IOpenable
                 ThingCategoryDefOf.BodyParts,
                 ThingCategoryDefOf.Apparel,
                 ThingCategoryDefOf.Drugs,
-                ThingCategoryDefOf.FoodMeals,
                 ThingCategoryDefOf.Foods,
                 ThingCategoryDefOf.MeatRaw,
                 ThingCategoryDefOf.Items,
@@ -160,7 +159,7 @@ public class Present : Building, IThingHolder, IOpenable
                     incidentDef.defName != "PresentDrop" && incidentDef.defName != "ShortCircuit" &&
                     incidentDef.letterDef != null && incidentDef.letterDef.defName != "PurpleEvent" &&
                     !incidentDef.targetTags.Contains(IncidentTargetTagDefOf.World) &&
-                    !incidentDef.targetTags.Contains(IncidentTargetTagDefOf.Caravan))
+                    !incidentDef.targetTags.Contains(DefDatabase<IncidentTargetTagDef>.GetNamedSilentFail("Caravan")))
                 {
                     list2.Add(incidentDef);
                 }

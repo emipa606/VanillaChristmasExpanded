@@ -26,7 +26,7 @@ public class LordToil_CParty : LordToil
 
     public override ThinkTreeDutyHook VoluntaryJoinDutyHookFor(Pawn p)
     {
-        return DutyDefOf.Party.hook;
+        return DutyDefOf.SocialMeeting.hook;
     }
 
     public override void UpdateAllDuties()
@@ -39,7 +39,7 @@ public class LordToil_CParty : LordToil
 
     public override void LordToilTick()
     {
-        var unused = Data;
+        _ = Data;
         var num = ticksToNextPulse - 1;
         ticksToNextPulse = num;
         if (num > 0)

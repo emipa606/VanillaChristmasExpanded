@@ -1,21 +1,16 @@
-using System.Linq;
 using RimWorld;
 using Verse;
 using Verse.AI.Group;
 
 namespace VXMASSE;
 
-public class MapComponentXmass : MapComponent
+public class MapComponentXmass(Map map) : MapComponent(map)
 {
     private int lastPartyYear = -1;
 
     private bool once;
 
     private bool party;
-
-    public MapComponentXmass(Map map) : base(map)
-    {
-    }
 
     public override void ExposeData()
     {
@@ -82,29 +77,21 @@ public class MapComponentXmass : MapComponent
         lastPartyYear = GenDate.YearsPassed;
     }
 
-    public bool TryStartParty()
+    public void TryStartParty()
     {
         var pawn = GatheringsUtility.FindRandomGatheringOrganizer(Faction.OfPlayer, map, GatheringDefOf.Party);
-        bool result;
         if (pawn == null)
         {
-            result = false;
-        }
-        else
-        {
-            if (!RCellFinder.TryFindGatheringSpot(pawn, GatheringDefOf.Party, true, out var intVec))
-            {
-                result = false;
-            }
-            else
-            {
-                LordMaker.MakeNewLord(pawn.Faction, new LordJob_Joinable_CParty(intVec, pawn), map);
-                Find.LetterStack.ReceiveLetter("CParyLabel".Translate(), "CParyLetter".Translate(),
-                    LetterDefOf.PositiveEvent, new TargetInfo(intVec, map));
-                result = true;
-            }
+            return;
         }
 
-        return result;
+        if (!RCellFinder.TryFindGatheringSpot(pawn, GatheringDefOf.Party, true, out var intVec))
+        {
+            return;
+        }
+
+        LordMaker.MakeNewLord(pawn.Faction, new LordJob_Joinable_CParty(intVec, pawn), map);
+        Find.LetterStack.ReceiveLetter("CParyLabel".Translate(), "CParyLetter".Translate(),
+            LetterDefOf.PositiveEvent, new TargetInfo(intVec, map));
     }
 }
