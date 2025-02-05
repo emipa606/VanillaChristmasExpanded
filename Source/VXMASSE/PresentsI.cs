@@ -34,6 +34,6 @@ internal class PresentsI : IncidentWorker
     private void TryFindPresentDropCell(IntVec3 nearLoc, Map map, int maxDist, out IntVec3 pos)
     {
         var presentIncoming = XDefOf.PresentIncoming;
-        CellFinderLoose.TryFindSkyfallerCell(presentIncoming, map, out pos, 10, nearLoc, maxDist);
+        CellFinderLoose.TryFindSkyfallerCell(presentIncoming, map, out pos, 10, nearLoc, maxDist, false);
     }
 }

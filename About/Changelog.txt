@@ -1,5 +1,8 @@
 # Changelog for VanillaChristmasExpanded
 
+1.5.1 - Presents should no longer fall through roofs or getting destroyed by thick roofs, thanks Ferris
+
+
 1.5.0 - Mod updated for 1.5 and passed autotests
 
 
