@@ -33,6 +33,7 @@
     </stuffCategories>
     <costStuffCount>120</costStuffCount>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
     <placeWorkers>
       <li>PlaceWorker_Heater</li>
     </placeWorkers>
