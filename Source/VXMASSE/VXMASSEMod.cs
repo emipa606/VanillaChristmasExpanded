@@ -10,7 +10,7 @@ internal class VXMASSEMod : Mod
     /// <summary>
     ///     The instance of the settings to be read by the mod
     /// </summary>
-    public static VXMASSEMod instance;
+    public static VXMASSEMod Instance;
 
     private static string currentVersion;
 
@@ -25,7 +25,7 @@ internal class VXMASSEMod : Mod
     /// <param name="content"></param>
     public VXMASSEMod(ModContentPack content) : base(content)
     {
-        instance = this;
+        Instance = this;
         currentVersion = VersionFromManifest.GetVersionFromModMetaData(content.ModMetaData);
     }
 
@@ -36,14 +36,10 @@ internal class VXMASSEMod : Mod
     {
         get
         {
-            if (settings == null)
-            {
-                settings = GetSettings<VXMASSESettings>();
-            }
+            settings ??= GetSettings<VXMASSESettings>();
 
             return settings;
         }
-        set => settings = value;
     }
 
     /// <summary>
@@ -62,19 +58,19 @@ internal class VXMASSEMod : Mod
     /// <param name="rect"></param>
     public override void DoSettingsWindowContents(Rect rect)
     {
-        var listing_Standard = new Listing_Standard();
-        listing_Standard.Begin(rect);
-        listing_Standard.Gap();
-        listing_Standard.CheckboxLabeled("VCEGifts".Translate(), ref Settings.VCEGifts, "VCEGiftsTT".Translate());
+        var listingStandard = new Listing_Standard();
+        listingStandard.Begin(rect);
+        listingStandard.Gap();
+        listingStandard.CheckboxLabeled("VCEGifts".Translate(), ref Settings.VCEGifts, "VCEGiftsTT".Translate());
         if (currentVersion != null)
         {
-            listing_Standard.Gap();
+            listingStandard.Gap();
             GUI.contentColor = Color.gray;
-            listing_Standard.Label("VCECurrentModVersion".Translate(currentVersion));
+            listingStandard.Label("VCECurrentModVersion".Translate(currentVersion));
             GUI.contentColor = Color.white;
         }
 
-        listing_Standard.End();
+        listingStandard.End();
         Settings.Write();
     }
 }

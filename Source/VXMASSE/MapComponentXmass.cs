@@ -46,7 +46,7 @@ public class MapComponentXmass(Map map) : MapComponent(map)
 
         var season = GenDate.Season(GenTicks.TicksAbs, Find.WorldGrid.LongLatOf(map.Tile));
         var doTheThing = false;
-        if (season == Season.PermanentSummer || season == Season.PermanentWinter)
+        if (season is Season.PermanentSummer or Season.PermanentWinter)
         {
             //Log.Message("permanent season");
             if (GenDate.Quadrum(GenTicks.TicksAbs, Find.WorldGrid.LongLatOf(map.Tile).x) != Quadrum.Decembary)
@@ -73,11 +73,11 @@ public class MapComponentXmass(Map map) : MapComponent(map)
         incidentParms.forced = true;
         incidentParms.target = map;
         Find.Storyteller.incidentQueue.Add(XDefOf.PresentDrop, Find.TickManager.TicksGame, incidentParms, 240000);
-        TryStartParty();
+        tryStartParty();
         lastPartyYear = GenDate.YearsPassed;
     }
 
-    public void TryStartParty()
+    private void tryStartParty()
     {
         var pawn = GatheringsUtility.FindRandomGatheringOrganizer(Faction.OfPlayer, map, GatheringDefOf.Party);
         if (pawn == null)

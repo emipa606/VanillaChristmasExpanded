@@ -25,7 +25,7 @@ public class Present : Building, IThingHolder, IOpenable
 
     public virtual void Open()
     {
-        EjectContents();
+        ejectContents();
     }
 
     public ThingOwner GetDirectlyHeldThings()
@@ -44,18 +44,6 @@ public class Present : Building, IThingHolder, IOpenable
         Scribe_Deep.Look(ref innerContainer, "innerContainer", this);
     }
 
-    public override void Tick()
-    {
-        base.Tick();
-        innerContainer.ThingOwnerTick();
-    }
-
-    public override void TickRare()
-    {
-        base.TickRare();
-        innerContainer.ThingOwnerTickRare();
-    }
-
     public override IEnumerable<Gizmo> GetGizmos()
     {
         foreach (var c in base.GetGizmos())
@@ -64,7 +52,7 @@ public class Present : Building, IThingHolder, IOpenable
         }
     }
 
-    private void EjectContents()
+    private void ejectContents()
     {
         var random = new Random();
         var num = random.Next(1, 101);
@@ -146,7 +134,6 @@ public class Present : Building, IThingHolder, IOpenable
             }
 
             GenPlace.TryPlaceThing(thing, intVec, Map, ThingPlaceMode.Direct);
-            DeSpawn();
         }
         else
         {
@@ -168,7 +155,7 @@ public class Present : Building, IThingHolder, IOpenable
             var incidentDef2 = list2.RandomElement();
             if (incidentDef2 == null)
             {
-                EjectContents();
+                ejectContents();
             }
 
             var incidentParms = StorytellerUtility.DefaultParmsNow(incidentDef2?.category, Map);
@@ -181,7 +168,8 @@ public class Present : Building, IThingHolder, IOpenable
             }
 
             incidentDef2?.Worker.TryExecute(incidentParms);
-            DeSpawn();
         }
+
+        DeSpawn();
     }
 }

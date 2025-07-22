@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: red christmas tree -->
+  <ChristmasTreeB.label>red christmas tree</ChristmasTreeB.label>
+  <!-- EN: Red christmas tree -->
+  <ChristmasTreeB.description>Red christmas tree</ChristmasTreeB.description>
+  <!-- EN: white christmas tree -->
+  <ChristmasTreeBase.label>white christmas tree</ChristmasTreeBase.label>
+  <!-- EN: White christmas tree -->
+  <ChristmasTreeBase.description>White christmas tree</ChristmasTreeBase.description>
+  <!-- EN: yellow christmas tree -->
+  <ChristmasTreeC.label>yellow christmas tree</ChristmasTreeC.label>
+  <!-- EN: Yellow christmas tree -->
+  <ChristmasTreeC.description>Yellow christmas tree</ChristmasTreeC.description>
+  <!-- EN: blue christmas tree -->
+  <ChristmasTreeD.label>blue christmas tree</ChristmasTreeD.label>
+  <!-- EN: Blue christmas tree -->
+  <ChristmasTreeD.description>Blue christmas tree</ChristmasTreeD.description>
+</LanguageData>

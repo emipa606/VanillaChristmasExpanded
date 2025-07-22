@@ -1,0 +1,34 @@
+ManifestFileVersion: 0
+CRC: 1429166429
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: cb0730e22836b9e2414e9ea1b5163456
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2612ac43db082a73502ee80f2eceb73f
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: cb0730e22836b9e2414e9ea1b5163456
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Data/Mlie.VanillaChristmasExpanded/Textures/Things/Buildings_Gift/PresentA.png
+- Assets/Data/Mlie.VanillaChristmasExpanded/Textures/Things/Item_Eggnogs/Eggnog_a.png
+- Assets/Data/Mlie.VanillaChristmasExpanded/Textures/Things/Buildings_Gift/PresentB.png
+- Assets/Data/Mlie.VanillaChristmasExpanded/Textures/Things/Buildings_Fireplace/Fireplace_east.png
+- Assets/Data/Mlie.VanillaChristmasExpanded/Textures/Things/Buildings_Fireplace/Fireplace_north.png
+- Assets/Data/Mlie.VanillaChristmasExpanded/Textures/Things/Buildings_ChristmasTree/ChristmasTreeC.png
+- Assets/Data/Mlie.VanillaChristmasExpanded/Textures/Things/Item_Eggnogs/Eggnog_b.png
+- Assets/Data/Mlie.VanillaChristmasExpanded/Textures/Things/Buildings_ChristmasTree/ChristmasTreeD.png
+- Assets/Data/Mlie.VanillaChristmasExpanded/Textures/Things/Buildings_Gift/PresentC.png
+- Assets/Data/Mlie.VanillaChristmasExpanded/Textures/Things/Item_Eggnogs/Eggnog_c.png
+- Assets/Data/Mlie.VanillaChristmasExpanded/Textures/Things/Buildings_Gift/PresentD.png
+- Assets/Data/Mlie.VanillaChristmasExpanded/Textures/Things/Buildings_Fireplace/Fireplace_south.png
+- Assets/Data/Mlie.VanillaChristmasExpanded/Textures/Things/Buildings_ChristmasTree/ChristmasTreeB.png
+- Assets/Data/Mlie.VanillaChristmasExpanded/Textures/Things/Buildings_ChristmasTree/ChristmasTreeA.png
+- Assets/Data/Mlie.VanillaChristmasExpanded/Textures/Things/Buildings_Gift/PresentE.png
+Dependencies: []

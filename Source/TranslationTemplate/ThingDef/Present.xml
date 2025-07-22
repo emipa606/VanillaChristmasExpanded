@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: present -->
+  <Present.label>present</Present.label>
+  <!-- EN: Christmas present -->
+  <Present.description>Christmas present</Present.description>
+  <!-- EN: present (incoming) -->
+  <PresentIncoming.label>present (incoming)</PresentIncoming.label>
+</LanguageData>

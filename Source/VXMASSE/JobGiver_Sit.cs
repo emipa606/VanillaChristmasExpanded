@@ -75,11 +75,4 @@ public class JobGiver_Sit : JobGiver_Wander
             return result;
         }
     }
-
-    protected virtual IntVec3 GetExactWanderDestIfNull(Pawn pawn)
-    {
-        var position = pawn.Position;
-        return RCellFinder.RandomWanderDestFor(pawn, position, 10f, wanderDestValidator,
-            PawnUtility.ResolveMaxDanger(pawn, Danger.None));
-    }
 }

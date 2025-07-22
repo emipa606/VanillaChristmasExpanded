@@ -29,18 +29,18 @@ public class LordJob_Joinable_CParty : LordJob_VoluntarilyJoinable
     public override StateGraph CreateGraph()
     {
         var stateGraph = new StateGraph();
-        var lordToil_CParty = new LordToil_CParty(spot);
-        stateGraph.AddToil(lordToil_CParty);
-        var lordToil_End = new LordToil_End();
-        stateGraph.AddToil(lordToil_End);
-        var transition = new Transition(lordToil_CParty, lordToil_End);
-        transition.AddTrigger(new Trigger_TickCondition(ShouldBeCalledOff));
+        var lordToilCParty = new LordToil_CParty(spot);
+        stateGraph.AddToil(lordToilCParty);
+        var lordToilEnd = new LordToil_End();
+        stateGraph.AddToil(lordToilEnd);
+        var transition = new Transition(lordToilCParty, lordToilEnd);
+        transition.AddTrigger(new Trigger_TickCondition(shouldBeCalledOff));
         transition.AddTrigger(new Trigger_PawnKilled());
         transition.AddPreAction(new TransitionAction_Message("MessagePartyCalledOff".Translate(),
             MessageTypeDefOf.NegativeEvent, new TargetInfo(spot, Map)));
         stateGraph.AddTransition(transition);
         timeoutTrigger = new Trigger_TicksPassed(Rand.RangeInclusive(5000, 15000));
-        var transition2 = new Transition(lordToil_CParty, lordToil_End);
+        var transition2 = new Transition(lordToilCParty, lordToilEnd);
         transition2.AddTrigger(timeoutTrigger);
         transition2.AddPreAction(new TransitionAction_Message("MessagePartyFinished".Translate(),
             MessageTypeDefOf.SituationResolved, new TargetInfo(spot, Map)));
@@ -48,7 +48,7 @@ public class LordJob_Joinable_CParty : LordJob_VoluntarilyJoinable
         return stateGraph;
     }
 
-    private bool ShouldBeCalledOff()
+    private bool shouldBeCalledOff()
     {
         return !GatheringsUtility.AcceptableGameConditionsToContinueGathering(Map) ||
                !spot.Roofed(Map) && !JoyUtility.EnjoyableOutsideNow(Map);
@@ -56,7 +56,7 @@ public class LordJob_Joinable_CParty : LordJob_VoluntarilyJoinable
 
     public override float VoluntaryJoinPriorityFor(Pawn p)
     {
-        if (!IsInvited(p))
+        if (!isInvited(p))
         {
             return 0f;
         }
@@ -71,7 +71,7 @@ public class LordJob_Joinable_CParty : LordJob_VoluntarilyJoinable
             return 0f;
         }
 
-        if (!lord.ownedPawns.Contains(p) && IsPartyAboutToEnd())
+        if (!lord.ownedPawns.Contains(p) && isPartyAboutToEnd())
         {
             return 0f;
         }
@@ -85,17 +85,12 @@ public class LordJob_Joinable_CParty : LordJob_VoluntarilyJoinable
         Scribe_References.Look(ref organizer, "corganizer");
     }
 
-    public virtual string GetReport()
-    {
-        return "LordReportAttendingParty".Translate();
-    }
-
-    private bool IsPartyAboutToEnd()
+    private bool isPartyAboutToEnd()
     {
         return timeoutTrigger.TicksLeft < 1200;
     }
 
-    private bool IsInvited(Pawn p)
+    private bool isInvited(Pawn p)
     {
         return lord.faction != null && p.Faction == lord.faction;
     }

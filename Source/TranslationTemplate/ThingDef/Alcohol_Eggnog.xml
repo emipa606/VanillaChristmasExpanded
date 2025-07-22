@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: eggnog -->
+  <Eggnog.label>eggnog</Eggnog.label>
+  <!-- EN: A masterpiece of the culinary arts, eggnog are the perfect beverage for Christmas. -->
+  <Eggnog.description>A masterpiece of the culinary arts, eggnog are the perfect beverage for Christmas.</Eggnog.description>
+  <!-- EN: Drink {0} -->
+  <Eggnog.ingestible.ingestCommandString>Drink {0}</Eggnog.ingestible.ingestCommandString>
+  <!-- EN: Drinking {0}. -->
+  <Eggnog.ingestible.ingestReportString>Drinking {0}.</Eggnog.ingestible.ingestReportString>
+</LanguageData>

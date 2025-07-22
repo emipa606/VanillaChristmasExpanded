@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: make 2 eggnogs -->
+  <Make_2Eggnogs.label>make 2 eggnogs</Make_2Eggnogs.label>
+  <!-- EN: Make 2 eggnogs. -->
+  <Make_2Eggnogs.description>Make 2 eggnogs.</Make_2Eggnogs.description>
+  <!-- EN: Making 2 eggnogs. -->
+  <Make_2Eggnogs.jobString>Making 2 eggnogs.</Make_2Eggnogs.jobString>
+  <!-- EN: make 6 eggnogs -->
+  <Make_6Eggnogs.label>make 6 eggnogs</Make_6Eggnogs.label>
+  <!-- EN: Make 6 eggnogs. -->
+  <Make_6Eggnogs.description>Make 6 eggnogs.</Make_6Eggnogs.description>
+  <!-- EN: Making 6 eggnogs. -->
+  <Make_6Eggnogs.jobString>Making 6 eggnogs.</Make_6Eggnogs.jobString>
+</LanguageData>
