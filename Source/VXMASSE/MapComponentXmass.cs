@@ -29,7 +29,6 @@ public class MapComponentXmass(Map map) : MapComponent(map)
 
         if (lastPartyYear == GenDate.YearsPassed)
         {
-            //Log.Message(lastPartyYear.ToString());
             return;
         }
 
@@ -40,7 +39,6 @@ public class MapComponentXmass(Map map) : MapComponent(map)
             !map.listerBuildings.AllBuildingsColonistOfDef(ThingDef.Named("ChristmasTreeC")).Any() &&
             !map.listerBuildings.AllBuildingsColonistOfDef(ThingDef.Named("ChristmasTreeD")).Any())
         {
-            //Log.Message("no tree");
             return;
         }
 
@@ -48,10 +46,8 @@ public class MapComponentXmass(Map map) : MapComponent(map)
         var doTheThing = false;
         if (season is Season.PermanentSummer or Season.PermanentWinter)
         {
-            //Log.Message("permanent season");
             if (GenDate.Quadrum(GenTicks.TicksAbs, Find.WorldGrid.LongLatOf(map.Tile).x) != Quadrum.Decembary)
             {
-                //Log.Message("not december");
                 return;
             }
 
@@ -62,11 +58,9 @@ public class MapComponentXmass(Map map) : MapComponent(map)
                             GenDate.DayOfSeason(GenTicks.TicksAbs, Find.WorldGrid.LongLatOf(map.Tile).x) < 2) ||
             !once)
         {
-            //Log.Message("not winter");
             return;
         }
 
-        //Log.Message("party");
         once = false;
         ExposeData();
         var incidentParms = StorytellerUtility.DefaultParmsNow(IncidentCategoryDefOf.Misc, map);

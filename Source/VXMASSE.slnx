@@ -6,4 +6,34 @@
     <BuildType Name="Release" />
   </Configurations>
   <Project Path="VXMASSE/VXMASSE.csproj" />
+  <Folder Name="/XML/1.7/Defs/Misc/">
+    <File Path="../1.7/Defs/Misc/DesignatorDropdownGroupDef.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/ThingDefs_Buildings/">
+    <File Path="../1.7/Defs/ThingDefs_Buildings/CristmasTrees.xml" />
+    <File Path="../1.7/Defs/ThingDefs_Buildings/Fireplace.xml" />
+    <File Path="../1.7/Defs/ThingDefs_Buildings/Present.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Patches/">
+    <File Path="../1.7/Patches/owlchemist.simplefxsmoke.xml" />
+  </Folder>
+  <Folder Name="/XML/About/">
+    <File Path="../About/about.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/Storyteller/">
+    <File Path="../1.7/Defs/Storyteller/PresentsDrop.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/DutyDef/">
+    <File Path="../1.7/Defs/DutyDef/Cparty.xml" />
+  </Folder>
+  <Folder Name="/XML/Patches/">
+    <File Path="../Patches/Patches.xml" />
+  </Folder>
+  <Folder Name="/XML/Languages/English/Keyed/">
+    <File Path="../Languages/English/Keyed/action.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/ThingDefs_Food/">
+    <File Path="../1.7/Defs/ThingDefs_Food/Alcohol_Eggnog.xml" />
+    <File Path="../1.7/Defs/ThingDefs_Food/Recipes_Eggnog.xml" />
+  </Folder>
 </Solution>

@@ -15,7 +15,7 @@ public class Present : Building, IThingHolder, IOpenable
         innerContainer = new ThingOwner<Thing>(this, false);
     }
 
-    private bool HasAnyContents => true;
+    private static bool HasAnyContents => true;
 
     public Thing ContainedThing => innerContainer.Count != 0 ? innerContainer[0] : null;
 
@@ -164,7 +164,7 @@ public class Present : Building, IThingHolder, IOpenable
             {
                 var storytellerComp = Find.Storyteller.storytellerComps.First(x =>
                     x is StorytellerComp_OnOffCycle || x is StorytellerComp_RandomMain);
-                incidentParms = storytellerComp.GenerateParms(incidentDef2.category, incidentParms.target);
+                incidentParms = storytellerComp.GenerateParms(incidentDef2?.category, incidentParms.target);
             }
 
             incidentDef2?.Worker.TryExecute(incidentParms);

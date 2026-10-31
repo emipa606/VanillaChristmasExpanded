@@ -12,10 +12,11 @@
     <li>1.4</li>
     <li>1.5</li>
     <li>1.6</li>
+    <li>1.7</li>
   </supportedVersions>
   <modDependencies />
   <loadAfter />
-  <description>[img]https://i.imgur.com/buuPQel.png[/img]
+  <description>[img]https://img.litet.net/logos/Info.png[/img]
 Update of Oskar Potocki and Kikohis mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=1944229762
 with their approval.
@@ -24,31 +25,31 @@ with their approval.
 - Added support for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2574489704]Simple FX: Smoke[/url]
 - Added option for disabling gift-drops
 
-[img]https://i.imgur.com/pufA0kM.png[/img]
+[img]https://img.litet.net/logos/Notice.png[/img]
 
 [table]
     [tr]
-        [td][url=https://discord.gg/h5TY6DA][img]https://i.imgur.com/zdzzBrc.png[/img][/url][/td]
-        [td][url=https://github.com/emipa606/VanillaChristmasExpanded][img]https://i.imgur.com/kTkpTOE.png[/img][/url][/td]
+        [td][url=https://discord.gg/h5TY6DA][img]https://img.litet.net/logos/Discord.png[/img][/url][/td]
+        [td][url=https://github.com/emipa606/VanillaChristmasExpanded][img]https://img.litet.net/logos/Github.png[/img][/url][/td]
     [/tr]
     [tr]
-        [td][img]https://i.imgur.com/WjDSfUn.png[/img][/td]
-        [td][img]https://i.imgur.com/Be8E2qJ.png[/img][/td]
+        [td][img]https://img.litet.net/logos/SafeToAdd.png[/img][/td]
+        [td][img]https://img.litet.net/logos/RemoveMayWork.png[/img][/td]
     [/tr]
 [/table]
 	
-[img]https://i.imgur.com/Z4GOv8H.png[/img]
-[img]https://i.imgur.com/p7Fv1Z6.gif[/img]
-[url=https://www.patreon.com/oskarpotocki][img]https://i.imgur.com/m7knAau.png[/img][/url]
+[img]https://img.litet.net/logos/OriginalDescription.png[/img]
+[img]https://img.litet.net/logos/ImageNotFound.png[/img]
+[url=https://www.patreon.com/oskarpotocki][img]https://img.litet.net/m7knAau.png[/img][/url]
 
 Vanilla Christmas Expanded is what could easily be described as a temporary, festive mini-mod. Celebrate Christmas on the Rim, add some colour to your colonies and await Christmas presents!
 
 This mod adds several new mechanics to the game, most notably a Christmas tree, being a 1x1 structure, enhancing the beauty of every room and allowing for a new event to occur - Presents!
 New structure - a fireplace, as well as a whole lot of eggnog are there to allow you to have a truly festive period.
 
-[img]https://i.imgur.com/Al3cdR3.png[/img]
-[img]https://i.imgur.com/NYr28zC.png[/img]
-[img]https://i.imgur.com/5Bs6gcu.png[/img]
+[img]https://img.litet.net/Al3cdR3.png[/img]
+[img]https://img.litet.net/NYr28zC.png[/img]
+[img]https://img.litet.net/5Bs6gcu.png[/img]
 
 [h1]Legal stuff[/h1]
 
@@ -59,17 +60,17 @@ Rimworld is owned by Tynan Sylvester.
 
 [url=https://creativecommons.org/licenses/by-nc-nd/4.0/](CC BY-NC-ND 4.0)[/url]
 
-[img]https://i.imgur.com/PwoNOj4.png[/img]
+[img]https://img.litet.net/logos/ReportingIssues.png[/img]
 [list]
 [*] See if the the error persists if you just have this mod and its requirements active.
 [*] If not, try adding your other mods until it happens again.
-[*] Post your error-log using the [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404]Log Uploader[/url] or the standalone [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404]Uploader[/url] and command Ctrl+F12
+[*] Always post your log using the [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404]Log Uploader[/url]
 [*] For best support, please use the Discord-channel for error-reporting.
 [*] Do not report errors by making a discussion-thread, I get no notification of that.
 [*] If you have the solution for a problem, please post it to the GitHub repository.
 [*] Use [url=https://github.com/RimSort/RimSort/releases/latest]RimSort[/url] to sort your mods
 [/list] 
 
-[url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2310043014][img]https://img.shields.io/github/v/release/emipa606/VanillaChristmasExpanded?label=latest%20version&amp;style=plastic&amp;color=9f1111&amp;labelColor=black[/img][/url] | tags:  festive,  holiday</description>
-  <modVersion IgnoreIfNoMatchingField="True">1.6.0</modVersion>
+[url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2310043014][img]https://img.shields.io/github/v/release/emipa606/VanillaChristmasExpanded?label=latest%20version&amp;style=plastic&amp;color=9f1111&amp;labelColor=black[/img][/url] | festive, holiday</description>
+  <modVersion IgnoreIfNoMatchingField="True">1.7.0</modVersion>
 </ModMetaData>

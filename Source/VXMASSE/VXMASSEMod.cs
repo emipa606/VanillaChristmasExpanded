@@ -15,11 +15,6 @@ internal class VXMASSEMod : Mod
     private static string currentVersion;
 
     /// <summary>
-    ///     The private settings
-    /// </summary>
-    private VXMASSESettings settings;
-
-    /// <summary>
     ///     Constructor
     /// </summary>
     /// <param name="content"></param>
@@ -36,9 +31,9 @@ internal class VXMASSEMod : Mod
     {
         get
         {
-            settings ??= GetSettings<VXMASSESettings>();
+            field ??= GetSettings<VXMASSESettings>();
 
-            return settings;
+            return field;
         }
     }
 
@@ -55,11 +50,11 @@ internal class VXMASSEMod : Mod
     ///     The settings-window
     ///     For more info: https://rimworldwiki.com/wiki/Modding_Tutorials/ModSettings
     /// </summary>
-    /// <param name="rect"></param>
-    public override void DoSettingsWindowContents(Rect rect)
+    /// <param name="inRect"></param>
+    public override void DoSettingsWindowContents(Rect inRect)
     {
         var listingStandard = new Listing_Standard();
-        listingStandard.Begin(rect);
+        listingStandard.Begin(inRect);
         listingStandard.Gap();
         listingStandard.CheckboxLabeled("VCEGifts".Translate(), ref Settings.VCEGifts, "VCEGiftsTT".Translate());
         if (currentVersion != null)
